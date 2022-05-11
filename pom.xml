@@ -106,8 +106,8 @@
     <py4j.version>0.10.7</py4j.version>
     <scala-2.11.version>2.11.12</scala-2.11.version>
     <scala-2.12.version>2.12.10</scala-2.12.version>
-    <scala.binary.version>2.11</scala.binary.version>
-    <scala.version>${scala-2.11.version}</scala.version>
+    <scala.binary.version>2.12</scala.binary.version>
+    <scala.version>${scala-2.12.version}</scala.version>
     <scalatest.version>3.0.8</scalatest.version>
     <scalatra.version>2.6.5</scalatra.version>
     <java.version>1.8</java.version>
@@ -1075,6 +1075,32 @@
           https://archive.apache.org/dist/spark/spark-3.0.0/spark-3.0.0-bin-hadoop2.7.tgz
         </spark.bin.download.url>
         <spark.bin.name>spark-3.0.0-bin-hadoop2.7</spark.bin.name>
+      </properties>
+    </profile>
+
+    <profile>
+      <id>spark-3.1</id>
+      <activation>
+        <property>
+          <name>spark-3.1</name>
+        </property>
+      </activation>
+      <properties>
+        <spark.scala-2.12.version>3.1.3</spark.scala-2.12.version>
+        <spark.scala-2.11.version>2.4.5</spark.scala-2.11.version>
+        <spark.version>${spark.scala-2.12.version}</spark.version>
+        <netty.spark-2.12.version>4.1.51.Final</netty.spark-2.12.version>
+        <netty.spark-2.11.version>4.1.47.Final</netty.spark-2.11.version>
+        <netty.version>${netty.spark-2.12.version}</netty.version>
+        <java.version>1.8</java.version>
+        <py4j.version>0.10.9</py4j.version>
+        <json4s.spark-2.11.version>3.5.3</json4s.spark-2.11.version>
+        <json4s.spark-2.12.version>3.7.0-M5</json4s.spark-2.12.version>
+        <json4s.version>${json4s.spark-2.12.version}</json4s.version>
+        <spark.bin.download.url>
+            https://dlcdn.apache.org/spark/spark-3.1.3/spark-3.1.3-bin-hadoop3.2.tgz
+        </spark.bin.download.url>
+        <spark.bin.name>spark-3.1.3-bin-hadoop3.2</spark.bin.name>
       </properties>
     </profile>
 
