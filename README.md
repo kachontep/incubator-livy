@@ -77,3 +77,23 @@ between different Spark versions.
 
 The Livy package itself does not contain a Spark distribution. It will work with any supported
 version of Spark without needing to rebuild.
+
+
+## Internal maintenance by TH Data Lab Team
+
+As the original livy project is lack of maintenance, TH Data Lab team decide to maintain our own version.
+Being ready to integrate with the original in future, we keep the original development branch (`master`) and tags, but
+create our own mainline development branch in `main` (with human right respect). Any tags for our release version will
+use the prefix `thdatalab-vM.N.P` convention.
+
+```
+# Apache Livy mainline development branch
+git switch master
+
+# TH Data Lab mainline development branch
+git switch main
+
+# Checkout TH Data Lab release version
+# M = Major, N = Minor, P = Patch
+git checkout thdatalab-vM.N.P
+```
